@@ -12,7 +12,11 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Page({params}: {params: {recipeId: string}}) {
+export default async function Page({
+  params,
+}: {
+  params: { recipeId: string };
+}) {
   const { recipeId } = params;
   const response = await fetch(`https://dummyjson.com/recipes/${recipeId}`);
   const recipe = await response.json();
