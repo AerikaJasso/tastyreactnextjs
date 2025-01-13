@@ -18,14 +18,14 @@ export default async function Page({params}: {params: {recipeId: string}}) {
   const recipe = await response.json();
 
   if (!recipe) {
-    return <h4>No Recipe Found</h4>;
+    return <h4>No Recipe Found!</h4>;
   }
 
   return (
     <div className="xl:px-48 px-10 pb-12 fancyGradient">
       <div className="grid xl:grid-cols-2 pb-10 xl:pb-20">
         <div className="pt-12 xl:px-12">
-          <Link href={`/`} className="text-2xl">
+          <Link href="/" className="text-2xl">
             <p> ← Back to All Recipes </p>
           </Link>
           <h1 className="text-4xl lg:text-6xl my-8 uppercase">
